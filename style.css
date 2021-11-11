@@ -1,0 +1,117 @@
+:root {
+  /* ## Colors */
+  /* ### Primary */
+
+  /* - Very dark blue (main background): hsl(233, 47%, 7%)
+- Dark desaturated blue (card background): hsl(244, 38%, 16%)
+- Soft violet (accent): hsl(277, 64%, 61%) */
+
+  --very-dark-blue: hsl(233, 47%, 7%);
+  --dark-saturate-blue: hsl(244, 38%, 16%);
+  --soft-violet: hsl(277, 64%, 61%);
+
+  /* ### Neutral */
+
+  /* - White (main heading, stats): hsl(0, 0%, 100%)
+- Slightly transparent white (main paragraph): hsla(0, 0%, 100%, 0.75)
+- Slightly transparent white (stat headings): hsla(0, 0%, 100%, 0.6) */
+
+  --white: hsl(0, 0%, 100%);
+  --slighlty-transparent-white-main: hsla(0, 0%, 100%, 0.75);
+  --slightly-transparent-white-stat: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  /* font-family: 'Inter', sans-serif; */
+  background-color: var(--very-dark-blue);
+}
+
+.container {
+  font-family: "Inter", sans-serif;
+  color: var(--white);
+  margin: 41px 110px;
+  border-radius: 4px;
+  background-color: var(--dark-saturate-blue);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr;
+}
+
+.grid .grid-item.right {
+  position: relative;
+}
+
+.grid-item .grid-detail {
+  padding: 35px 37px;
+}
+.grid-item .grid-detail .clr-violet {
+  color: var(--soft-violet);
+}
+
+.grid-item .grid-detail p {
+  font-size: 10px;
+  line-height: 1.8;
+  margin: 20px 0;
+  color: hsl(0deg 0% 100% / 46%);
+}
+
+.grid-item .grid-detail .stats {
+  padding: 19px 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid-item .grid-detail .stats span {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 8px;
+  color: hsl(0deg 0% 100% / 51%);
+  text-transform: uppercase;
+}
+
+.grid .grid-item .bg-image {
+  background-image: url("./images/image-header-desktop.jpg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  border-radius: 0 4px 4px 0;
+}
+
+.grid .grid-item .overlay {
+  position: absolute;
+  width: 100%;
+  background: hsl(280deg 100% 54% / 38%);
+  height: 100%;
+}
+
+.grid .grid-item .overlay {
+  border-radius: 0 4px 4px 0;
+}
+
+@media screen and (max-width: 375px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .grid .grid-item .bg-image {
+    background-image: url("./images/image-header-mobile.jpg");
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--white);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
