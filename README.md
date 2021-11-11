@@ -1,6 +1,6 @@
 # Live Preview
 
-[Link](https://frontendmentors-stats-card-component-ehlzcepyg-samia.vercel.app/)
+[Preview Site](https://frontendmentors-stats-card-component-ehlzcepyg-samia.vercel.app/)
 
 # Frontend Mentor - Stats preview card component
 
